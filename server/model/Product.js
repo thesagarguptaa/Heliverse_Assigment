@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const employeeSchema = new mongoose.Schema({
+const productSchema = new mongoose.Schema({
   Id: {
     type: Number,
   },
@@ -27,4 +27,4 @@ const employeeSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Employee", employeeSchema);
+module.exports = mongoose.model("Product", productSchema);

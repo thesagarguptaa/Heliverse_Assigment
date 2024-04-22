@@ -48,9 +48,7 @@ const Home = () => {
       <NavBar />
       <SearchButton />
 
-      <div className=" mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl flex justify-center items-center  ">
-        ALL Employee
-      </div>
+  
 
       {!Cards ? (
         <div className="flex justify-center items-center">

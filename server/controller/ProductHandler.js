@@ -1,4 +1,4 @@
-const Employee = require("../model/Employee");
+const Product = require("../model/Product");
 
 //create employee
 exports.Create = async (req, res) => {
@@ -27,7 +27,7 @@ exports.Create = async (req, res) => {
     }
 
     //Create Entry
-    const entry = await Employee.create({
+    const entry = await Product.create({
       first_name,
       last_name,
       email,
@@ -65,7 +65,7 @@ exports.update = async (req, res) => {
       });
     }
 
-    const Userexist = await Employee.findOne({ email });
+    const Userexist = await Product.findOne({ email });
 
     if (!Userexist) {
       return res.status(400).json({
@@ -109,7 +109,7 @@ exports.update = async (req, res) => {
 exports.getAll = async (req, res) => {
   try {
     console.log(" I am in getAll ");
-    const find = await Employee.find({});
+    const find = await Product.find({});
 
     return res.status(200).json({
       success: true,
@@ -123,6 +123,8 @@ exports.getAll = async (req, res) => {
     });
   }
 };
+
+//get Filtered
 exports.getFilterd = async (req, res) => {
   try {
     // console.log(" I am in get filtered ");
